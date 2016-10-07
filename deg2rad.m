@@ -1,6 +1,6 @@
 function [ rad ] = deg2rad( deg )
-%UNTITLED2 Summary of this function goes here
-%   Detailed explanation goes here
+%deg2rad converts degrees to radians
+%   radians = deg2rad(degrees)
 rad = deg*pi/180;
 
 end
