@@ -1,8 +1,18 @@
-function [mat] = rotateMat(axis, angle, unit)
+function [mat] = rotate_mat(axis, angle, varargin)
+%ROTATE_MAT reurns the rotation matrixabout a specified axis and angle
+%   mat = ROTATE_MAT(axisNumber, angle, angleUnits) where angle units is a
+%   string 'degrees' or 'radians'. If not provided, 'degrees' is the
+%   default.
 
-if unit == 'radians'
-    
-elseif unit == 'degrees'
+if length(varargin) == 0
+    unit = 'degrees';
+else
+    unit = varargin{1};
+end
+
+if strcmp(unit, 'radians')
+    %do nothing
+elseif strcmp(unit, 'degrees')
    angle = angle*pi/180; 
 end
 
